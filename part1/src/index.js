@@ -10,6 +10,8 @@ const App = () => {
     {part:'Using props to pass data', exercises:7}, 
     {part:'State of a component', exercises:14}]
 
+    const total = contents.reduce((acc,obj)=>acc+obj.exercises, 0)
+
   return (
     <div>
       <HeaderComponent course='Half Stack application development'/>
@@ -17,7 +19,7 @@ const App = () => {
         <ContentComponent part={content.part} exercises={content.exercises} key={i}/>
       )}
       
-       <TotalComponent propTotal={contents.reduce((acc,obj)=>acc+obj.exercises, 0)}/>
+       <TotalComponent propTotal={total}/>
 
     </div>
   )
