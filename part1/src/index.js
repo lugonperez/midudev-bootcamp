@@ -5,18 +5,19 @@ import ContentComponent from './components/Content'
 import TotalComponent from './components/Total'
 
 const App = () => {
-  const contents = [
-    {part:'Fundamentals of React', exercises:10},
-    {part:'Using props to pass data', exercises:7}, 
-    {part:'State of a component', exercises:14}]
+  const course='Half Stack application development'
+  const parts = [
+    {name:'Fundamentals of React', exercises:10},
+    {name:'Using props to pass data', exercises:7}, 
+    {name:'State of a component', exercises:14}]
 
-    const total = contents.reduce((acc,obj)=>acc+obj.exercises, 0)
+    const total = parts.reduce((acc,obj)=>acc+obj.exercises, 0)
 
   return (
     <div>
-      <HeaderComponent course='Half Stack application development'/>
-      {contents.map((content,i)=>
-        <ContentComponent part={content.part} exercises={content.exercises} key={i}/>
+      <HeaderComponent course={course} />
+      {parts.map((part,i)=>
+        <ContentComponent part={part.name} exercises={part.exercises} key={i}/>
       )}
       
        <TotalComponent propTotal={total}/>
