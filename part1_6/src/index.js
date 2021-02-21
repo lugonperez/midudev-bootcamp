@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import Button from './components/Button.jsx'
-import Texts from './components/Texts.jsx'
+import Statistic from './components/Statistic.jsx'
+import Texts from './components/Statistic.jsx'
+import Statistics from './components/Statistics'
 
 const App = () => {
   // save clicks of each button to its own state
@@ -31,13 +33,15 @@ const App = () => {
       <Button text="good" onClick={handleClickGood} />
       <Button text="neutral" onClick={handleClickNeutral}/>
       <Button text="bad" onClick={handleClickBad} />
-    <h2>Statics</h2>
-      <Texts title="Good:" text={good}/>
-      <Texts title="Neutral:" text={neutral}/>
-      <Texts title="Bad:" text={bad}/>
-      <Texts title="All:" text={all}/>
-      <Texts title="Average:" text={!isNaN(average)?average:0}/>
-      <Texts title="Positive:" text={!isNaN(positive)?positive:0}/>
+   
+      <Statistics title="Statistics" all={all}>
+        <Statistic title="Good:" text={good}/>
+        <Statistic title="Neutral:" text={neutral}/>
+        <Statistic title="Bad:" text={bad}/>
+        <Statistic title="All:" text={all}/>
+        <Statistic title="Average:" text={!isNaN(average)?average:0}/>  
+        <Statistic title="Positive:" text={!isNaN(positive)?positive:0}/>
+      </Statistics>
     </div>
   )
 }

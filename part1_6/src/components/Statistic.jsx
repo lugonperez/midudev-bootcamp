@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 
-const Texts = ({title, text}) =>{
+const Statistic = ({title, text}) =>{
     return(
         <Fragment>
             <strong>{title}</strong>
@@ -9,4 +9,4 @@ const Texts = ({title, text}) =>{
     )
 }
 
-export default Texts
+export default Statistic
