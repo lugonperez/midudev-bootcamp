@@ -33,14 +33,14 @@ const App = () => {
       <Button text="good" onClick={handleClickGood} />
       <Button text="neutral" onClick={handleClickNeutral}/>
       <Button text="bad" onClick={handleClickBad} />
-   
+  
       <Statistics title="Statistics" all={all}>
-        <Statistic title="Good:" text={good}/>
-        <Statistic title="Neutral:" text={neutral}/>
-        <Statistic title="Bad:" text={bad}/>
-        <Statistic title="All:" text={all}/>
-        <Statistic title="Average:" text={!isNaN(average)?average:0}/>  
-        <Statistic title="Positive:" text={!isNaN(positive)?positive:0}/>
+        <Statistic title="Good:" value={good}/>
+        <Statistic title="Neutral:" value={neutral}/>
+        <Statistic title="Bad:" value={bad}/>
+        <Statistic title="All:" value={all}/>
+        <Statistic title="Average:" value={!isNaN(average)?average:0}/>  
+        <Statistic title="Positive:" value={!isNaN(positive)?positive:0}/>
       </Statistics>
     </div>
   )

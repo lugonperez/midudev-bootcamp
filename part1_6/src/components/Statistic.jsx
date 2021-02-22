@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react'
 
-const Statistic = ({title, text}) =>{
+const Statistic = ({title, value}) =>{
     return(
-        <Fragment>
-            <strong>{title}</strong>
-            <p>{text}</p>
-        </Fragment>
+        <tr>
+            <td>{title}</td>
+            <td>{value}</td>
+        </tr>
     )
 }
 
